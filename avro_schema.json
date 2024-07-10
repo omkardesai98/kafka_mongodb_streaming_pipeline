@@ -12,7 +12,7 @@
         "type": "string"
       },
       {
-        "name": "Market/Regular",
+        "name": "Market_Regular",
         "type": "string"
       },
       {
@@ -128,7 +128,7 @@
         "type": "string"
       },
       {
-        "name": "Material Shipped",
+        "name": "Material_Shipped",
         "type": "string"
       }
     ]
