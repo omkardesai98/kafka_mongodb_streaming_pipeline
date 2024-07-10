@@ -12,6 +12,10 @@
         "type": "string"
       },
       {
+        "name": "Market/Regular",
+        "type": "string"
+      },
+      {
         "name": "BookingID_Date",
         "type": "string"
       },
