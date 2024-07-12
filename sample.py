@@ -13,6 +13,9 @@ db = mongo_client['logistic_data']
 #collection
 collection = db['delivery_truck_data']
 
-result = collection.delete_many({})
+# result = collection.delete_many({})
 
+# print(result)
+
+result= collection.count_documents({"trip_end_date":None})
 print(result)

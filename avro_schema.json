@@ -3,7 +3,7 @@
   "namespace": "Logistic1",
   "name": "logistic_data1",
   "fields": [
-    { "name": "GpsProvider", "type":  "string" },
+    { "name": "GpsProvider", "type":  ["null","string"],"default":null },
     { "name": "BookingID", "type": "string" },
     { "name": "Market_Regular", "type": "string"},
     { "name": "BookingID_Date", "type": ["null", "string"] },
@@ -28,7 +28,7 @@
     { "name": "TRANSPORTATION_DISTANCE_IN_KM", "type": ["null", "string"], "default": null },
     { "name": "vehicleType", "type": ["null", "string"], "default": null },
     { "name": "Minimum_kms_to_be_covered_in_a_day", "type": ["null", "string"], "default": null },
-    { "name": "Driver_Name", "type": ["null", "string"] },
+    { "name": "Driver_Name", "type": ["null", "string"],"default":null },
     { "name": "Driver_MobileNo", "type": ["null", "string"], "default": null },
     { "name": "customerID", "type": ["null", "string"] },
     { "name": "customerNameCode", "type": ["null", "string"] },

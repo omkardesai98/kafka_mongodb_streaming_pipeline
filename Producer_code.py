@@ -60,7 +60,7 @@ try:
         converted_value = convert_to_str(value)
         producer.produce(topic='logistic_data1', key=str(index), value=converted_value, on_delivery=delivery_report)
         producer.flush()
-        time.sleep(2)
+        # time.sleep(2)
     
     print("All data published successfully")
 except KeyboardInterrupt:
