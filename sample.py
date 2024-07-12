@@ -1,33 +1,18 @@
-import datetime
-import time
-import json
-sample_dict = {'name':'omkar',
-               'age':'23',
-               'height':'179.23',
-               'date':'8/27/2020',
-               'time':'40:29.0',
-               'time1':'23:19.2',
-               'value':'12.42950111',
-               'date1':'8/28/2020 14:22'}
+from pymongo import MongoClient
+import pymongo
+import urllib
 
 
-def convert_data(value):
-    try:
-        value = int(value)
-        return value
-    except ValueError:
-        pass
-    try:
-        value = float(value)
-        return value
-    except ValueError:
-        pass
-    
+password = 'omkar@123'
+escaped_password = urllib.parse.quote_plus(password)
+conn = f"mongodb+srv://omkar:{escaped_password}@mongodb-cluster.mqazenv.mongodb.net/?retryWrites=true&w=majority&appName=mongoDB-cluster"
+mongo_client = MongoClient(conn)
 
-new_dict = {key:convert_data(value) for key,value in sample_dict.items()}
+#database
+db = mongo_client['logistic_data']
+#collection
+collection = db['delivery_truck_data']
 
-print(sample_dict)
-print(new_dict)
+result = collection.delete_many({})
 
-for value in new_dict.values():
-    print(type(value))
+print(result)
