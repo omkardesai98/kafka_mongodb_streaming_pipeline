@@ -19,7 +19,7 @@ schema_registry_client = SchemaRegistryClient({
     'basic.auth.user.info':'AU3FN3SZ6AMXZI36:gjXznU3NALcBAvo9KCrBdDBMGrf3QYChcdrxFNkXKe52ndrSH4YhgXSlnPZf2eAW'
 })
 
-subject_name = 'logistic_data-value'
+subject_name = 'logistic_data1-value'
 schema_str = schema_registry_client.get_latest_version(subject_name).schema.schema_str
 
 
@@ -41,7 +41,7 @@ consumer = DeserializingConsumer(
 )
 
 # subscribe to the topic 
-consumer.subscribe(['logistic_data'])
+consumer.subscribe(['logistic_data1'])
 
 
 
@@ -73,6 +73,7 @@ try:
         # converted_value = {key:convert_data(value) for key ,value in values.items()}
         
         print(f"successfully consumed: {msg.value()} for {key} ")
+        
             
 except KeyboardInterrupt:
     print("consumer stopped due to keyboard interruption!")

@@ -26,7 +26,7 @@ schema_registry_client = SchemaRegistryClient({
     'basic.auth.user.info': 'AU3FN3SZ6AMXZI36:gjXznU3NALcBAvo9KCrBdDBMGrf3QYChcdrxFNkXKe52ndrSH4YhgXSlnPZf2eAW'
 })
 
-subject_name = 'logistic_data-value'
+subject_name = 'logistic_data1-value'
 schema_str = schema_registry_client.get_latest_version(subject_name).schema.schema_str
 
 
@@ -53,12 +53,12 @@ def convert_to_str(value):
     return converted_value
 
 try:
-    logistic_data = pd.read_csv('delivery_trip_truck_data.csv')
+    logistic_data = pd.read_csv('delivery_trip_truck_data_new.csv')
     
     for index, value in logistic_data.iterrows():
         value = value.to_dict()
         converted_value = convert_to_str(value)
-        producer.produce(topic='logistic_data', key=str(index), value=converted_value, on_delivery=delivery_report)
+        producer.produce(topic='logistic_data1', key=str(index), value=converted_value, on_delivery=delivery_report)
         producer.flush()
         time.sleep(2)
     

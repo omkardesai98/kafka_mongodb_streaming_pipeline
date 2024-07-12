@@ -1,13 +1,13 @@
 {
   "type": "record",
-  "namespace": "Logistic",
-  "name": "logistic_data",
+  "namespace": "Logistic1",
+  "name": "logistic_data1",
   "fields": [
-    { "name": "GpsProvider", "type": ["null", "string"] },
-    { "name": "BookingID", "type": ["null", "string"] },
+    { "name": "GpsProvider", "type":  "string" },
+    { "name": "BookingID", "type": "string" },
     { "name": "Market_Regular", "type": "string"},
     { "name": "BookingID_Date", "type": ["null", "string"] },
-    { "name": "vehicle_no", "type": ["null", "string"] },
+    { "name": "vehicle_no", "type": "string" },
     { "name": "Origin_Location", "type": ["null", "string"] },
     { "name": "Destination_Location", "type": ["null", "string"] },
     { "name": "Org_lat_lon", "type": ["null", "string"] },
