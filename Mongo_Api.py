@@ -47,7 +47,7 @@ def filter_documents():
         return jsonify({"error": str(e)}), 500
 
 # Endpoint to aggregate data
-@app.route('/documents/aggregate', methods=['POST'])
+@app.route('/aggregate', methods=['POST'])
 def aggregate_documents():
     try:
         pipeline = request.json.get('pipeline', [])

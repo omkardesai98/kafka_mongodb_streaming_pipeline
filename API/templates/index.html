@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: lawngreen;
+        }
+        textarea {
+            background-color: black;
+            color: lawngreen;
+            border: 1px solid lawngreen;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        label, h1, h2 {
+            color: lawngreen;
+        }
+        input[type="submit"] {
+            background-color: black;
+            color: lawngreen;
+            border: 1px solid lawngreen;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: lawngreen;
+            color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Aggregation Pipeline Form</title>
+</head>
+<body>
+    <h1>MongoDB Aggregation Pipeline Form</h1>
+    
+    <!-- Form to submit aggregation pipeline -->
+    <form method="POST" action="/aggregate">
+        <label for="pipeline">Enter MongoDB Aggregation Pipeline:</label><br>
+        <textarea id="pipeline" name="pipeline" rows="10" cols="80"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Display aggregation results -->
+    {% if results %}
+        <h2>Aggregation Results:</h2>
+        <pre>{{ results }}</pre>
+    {% endif %}
+</body>
+</html>

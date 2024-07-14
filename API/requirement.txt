@@ -1,0 +1,5 @@
+Flask==2.0.3
+Werkzeug==2.0.3
+pymongo[srv]==3.12.1
+python-dotenv==0.19.2
+
