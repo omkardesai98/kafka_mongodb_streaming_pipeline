@@ -1,0 +1,7 @@
+pandas==2.2.2
+confluent-kafka==2.4.0
+pymongo==4.8.0
+dnspython==2.1.0
+urllib3==2.2.1
+requests
+fastavro

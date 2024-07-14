@@ -1,7 +1,0 @@
-pandas
-confluent_kafka
-flask
-pymongo
-bson
-dotenv
-urllib
