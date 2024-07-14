@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  producer:
+    build:
+      context: .
+      dockerfile: producer.dockerfile
+    environment:
+      - MONGO_DB_PASSWORD=omkar@123
+
+  consumer1:
+    build:
+      context: .
+      dockerfile: consumer.dockerfile
+    environment:
+      - MONGO_DB_PASSWORD=omkar@123
+
+  consumer2:
+    build:
+      context: .
+      dockerfile: consumer.dockerfile
+    environment:
+      - MONGO_DB_PASSWORD=omkar@123
+
+  consumer3:
+    build:
+      context: .
+      dockerfile: consumer.dockerfile
+    environment:
+      - MONGO_DB_PASSWORD=omkar@123
